@@ -1,0 +1,102 @@
+::[FFmpeg upscail_video_1_0 softy_plug]
+
+@echo off
+
+:again
+
+mkdir out
+for %%i in (*.mp4) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.mp4"
+)
+
+for %%i in (*.avi) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.avi"
+)
+
+for %%i in (*.mkv) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.mkv"
+)
+
+for %%i in (*.mov) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.mov"
+)
+
+for %%i in (*.wmv) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.wmv"
+)
+
+for %%i in (*.flv) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.flv"
+)
+
+for %%i in (*.avchd) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.avchd"
+)
+
+for %%i in (*.f4v) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.f4v"
+)
+
+for %%i in (*.swf) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.swf"
+)
+
+for %%i in (*.mpv) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.mpv"
+)
+
+for %%i in (*.mpe) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.mpe"
+)
+
+for %%i in (*.mp2) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.mp2"
+)
+
+for %%i in (*.mpeg) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.mpeg"
+)
+
+for %%i in (*.mpg) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.mpg"
+)
+
+for %%i in (*.3gp) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.3gp"
+)
+
+for %%i in (*.m4v) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.m4v"
+)
+
+for %%i in (*.qt) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.qt"
+)
+
+for %%i in (*.mxf) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset slower -crf 22 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.mxf"
+)
+
+for %%i in (*.raw) do (
+  ffmpeg -i "%%i" -c:v libx264 -preset veryslow -crf 0 -c:a aac -b:a 192k -ac 2 -ar 44100 -vf scale=3840:2560:flags=lanczos "out/%%~ni_3840_resolution.raw"
+)
+
+::[FFmpeg upscail_video_1_0 softy_plug]
+
+if NOT ["%errorlevel%"]==["0"] goto:error
+echo [92m%~n1 Done.[0m
+shift
+if "%~1" == "" goto:end
+goto:again
+:error
+
+echo [93mError! Video files to encode were not found. Check for video files in the folder with the executable .exe file.[0m
+pause
+exit 0
+:end
+
+cls
+echo [92mEncoding succesful. This window will close after 10 seconds.[0m
+timeout /t 10
+
+::[FFmpeg upscail_video_1_0 softy_plug]
